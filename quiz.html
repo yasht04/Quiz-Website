@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Quiz Application</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="quizs.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-container">
+        <div class="logo" id="logo">QuizMaster</div>
+        <div class="nav-links">
+          <button id="home-btn" class="nav-btn">Home</button>
+          <button id="categories-btn" class="nav-btn">Categories</button>
+          <button id="history-btn" class="nav-btn">History</button>
+          <button id="about-btn" class="nav-btn">About</button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main-container" class="main-container">
+      <div id="loader" class="loader-overlay hidden">
+        <div class="loader"></div>
+        <p>Fetching Quizzes...</p>
+      </div>
+
+      <div id="error-message" class="error-message hidden">
+        <h2>Oops! Something went wrong.</h2>
+        <p>We couldn't load the quizzes. Please try again later.</p>
+      </div>
+
+      <div id="welcome-screen" class="screen">
+        <div class="home-card">
+          <h1>Welcome to <span class="highlight">QuizMaster</span>!</h1>
+          <p class="intro-text">
+            Challenge yourself with quizzes from a variety of categories.
+            Sharpen your mind, learn new things, and have fun!
+          </p>
+          <button id="start-browsing-btn" class="btn-primary center-btn">
+            Let's Get Started →
+          </button>
+        </div>
+      </div>
+      <div id="about-screen" class="screen hidden">
+        <div class="home-card">
+          <h1>About <span class="highlight">QuizMaster</span></h1>
+          <p>
+            QuizMaster is a dynamic quiz application built to make learning and
+            testing knowledge an engaging experience. We use the Open Trivia
+            Database to provide a vast range of questions across numerous
+            categories and difficulties.
+          </p>
+          <p>
+            This project was created using HTML, custom CSS, and vanilla
+            JavaScript, demonstrating a lightweight yet powerful single-page
+            application.
+          </p>
+          <button id="back-to-welcome-btn" class="btn-primary center-btn">
+            Back to Home
+          </button>
+        </div>
+      </div>
+      <div id="dashboard-screen" class="screen hidden">
+        <header class="section-header">
+          <h1>Quiz Categories</h1>
+          <p>Select a category and difficulty to begin</p>
+        </header>
+        <main id="quiz-selection-container" class="quiz-grid"></main>
+      </div>
+
+      <div id="quiz-screen" class="screen hidden">
+        <div class="card relative">
+          <button id="quit-quiz-btn" class="quit-btn" title="Quit Quiz">
+            ✕
+          </button>
+          <div class="quiz-header">
+            <h2 id="quiz-title">Quiz Title</h2>
+            <div id="question-counter" class="question-counter"></div>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-bar" class="progress"></div>
+          </div>
+          <div class="timer-container">
+            <div id="timer" class="timer">15</div>
+          </div>
+          <div id="question-container" class="question-container">
+            <p id="question-text"></p>
+            <div id="options-container" class="options"></div>
+          </div>
+          <div id="feedback" class="feedback"></div>
+          <button id="next-btn" class="btn-primary hidden">Next</button>
+        </div>
+      </div>
+
+      <div id="score-screen" class="screen hidden">
+        <div class="card text-center">
+          <h2>Quiz Completed!</h2>
+          <p>Your final score is:</p>
+          <p id="final-score" class="final-score">0</p>
+          <p id="score-summary"></p>
+          <div class="score-buttons">
+            <button id="restart-btn" class="btn-primary">↻ Try Again</button>
+            <button id="dashboard-btn" class="btn-secondary">
+              ☰ Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="history-screen" class="screen hidden">
+        <div class="home-card">
+          <header class="section-header" style="margin-bottom: 1rem">
+            <h1>Quiz History</h1>
+            <p>Here are the results of the quizzes you've taken.</p>
+          </header>
+          <main id="history-container" class="history-list"></main>
+          <div id="history-buttons" class="history-buttons">
+            <button id="clear-history-btn" class="btn-secondary">
+              Clear History
+            </button>
+            <button id="back-to-home-from-history-btn" class="btn-primary">
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="quizj.js"></script>
+  </body>
+</html>
