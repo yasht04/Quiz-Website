@@ -1,57 +1,41 @@
-QuizMaster - A Vanilla JS Quiz Application
-A clean, responsive, and engaging quiz application built with HTML, CSS, and pure JavaScript. This project uses the Open Trivia Database API to provide an endless supply of questions across various categories and difficulty levels.
+# Interactive Quiz App
+
+A lightweight and interactive quiz web application that allows users to practice quizzes, view their scores, and track their quiz history.
 
 ## Features
-Dynamic Categories: Fetches a list of quiz categories directly from the API.
 
-Multiple Difficulties: Choose between Easy, Medium, and Hard for any category.
+- Fetches quiz categories and questions dynamically from [Open Trivia Database](https://opentdb.com/).
+- Multiple-choice quizzes with 3 difficulty levels: Easy, Medium, Hard.
+- Timer for each question (15 seconds).
+- Instant feedback: shows if the answer is correct or wrong, along with the correct answer.
+- Score summary at the end of the quiz.
+- Stores quiz history in `localStorage` to review past results.
+- Responsive and interactive UI.
 
-Timed Questions: Each question has a 15-second timer to keep things challenging.
+## Screens
 
-Instant Feedback: See immediately if your answer was correct or not. If wrong, the correct answer is highlighted.
-
-Progress Bar: Visually track your progress through the quiz.
-
-Score Summary: Get a final score and a summary message upon completion.
-
-Persistent History: Your quiz results are saved to localStorage, so you can view your history anytime.
-
-Fully Responsive: A clean and modern UI that works on all screen sizes.
-
-## Tech Stack
-HTML5
-
-CSS3 (Custom properties, Flexbox, Grid)
-
-Vanilla JavaScript (ES6+, Fetch API, localStorage)
-
-## Getting Started
-This is a static web project with no build steps required.
-
-Clone the repository:
-
-Bash
-
-git clone https://github.com/your-username/your-repo-name.git
-Navigate to the project directory:
-
-Bash
-
-cd your-repo-name
-Open the quiz.html file in your browser:
-You can do this by double-clicking the file or right-clicking and choosing "Open with..." your favorite browser.
+- **Welcome Screen** – Introduction and start browsing quizzes.
+- **Dashboard** – Select category and difficulty.
+- **Quiz Screen** – Answer questions with a timer.
+- **Score Screen** – Shows final score and performance summary.
+- **History Screen** – View past quiz attempts and clear history.
 
 ## How to Use
-Click the "Let's Get Started" button on the welcome screen.
 
-On the dashboard, browse the available categories.
+1. Open `index.html` in a web browser.
+2. Click **Start Browsing** to load quiz categories.
+3. Select a category and difficulty to start the quiz.
+4. Answer the questions before the timer runs out.
+5. Review your score and quiz history.
 
-Click on an Easy, Medium, or Hard button to start a quiz.
+## Technologies Used
 
-Answer each of the 10 questions before the timer runs out.
+- HTML
+- CSS (TailwindCSS optional for styling)
+- JavaScript (Vanilla JS)
+- Open Trivia Database API
 
-After the last question, your final score will be displayed.
+## Local Storage
 
-You can "Try Again" or go back to the "Dashboard" to choose another quiz.
-
-Click the "History" tab in the navigation bar to see your past scores.
+- Quiz history is saved in the browser's local storage.
+- Users can clear history using the **Clear History** button.
