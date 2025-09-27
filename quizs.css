@@ -22,7 +22,6 @@ body {
   }
 }
 
-
 .site-header {
   background: rgba(23, 23, 23, 0.8);
   border-bottom: 1px solid #262626; 
@@ -332,68 +331,6 @@ body {
   background-color: rgba(153, 27, 27, 0.5);
 }
 
-
-.hidden {
-  display: none !important;
-}
-.highlight {
-  color: #dc2626;
-  text-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
-}
-.relative {
-  position: relative;
-}
-.quit-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  color: #a3a3a3;
-  cursor: pointer;
-}
-.quit-btn:hover {
-  color: #fff;
-}
-
-.difficulty-btn {
-  flex: 1;
-  padding: 0.4rem 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
-}
-
-.difficulty-btn.easy {
-  background-color: rgba(20, 83, 45, 0.5);
-  color: #4ade80;
-  border: 1px solid rgba(21, 128, 61, 0.5);
-}
-.difficulty-btn.easy:hover {
-  background-color: rgba(22, 101, 52, 0.5);
-}
-
-.difficulty-btn.medium {
-  background-color: rgba(113, 63, 18, 0.5);
-  color: #facc15;
-  border: 1px solid rgba(161, 98, 7, 0.5);
-}
-.difficulty-btn.medium:hover {
-  background-color: rgba(133, 77, 14, 0.5);
-}
-
-.difficulty-btn.hard {
-  background-color: rgba(127, 29, 29, 0.5);
-  color: #f87171;
-  border: 1px solid rgba(185, 28, 28, 0.5);
-}
-.difficulty-btn.hard:hover {
-  background-color: rgba(153, 27, 27, 0.5);
-}
-
 .history-list {
   display: flex;
   flex-direction: column;
@@ -437,4 +374,85 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .main-container {
+    padding: 1rem;
+  }
+
+  .home-card,
+  .card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .quiz-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quiz-card {
+    padding: 1rem;
+  }
+
+  .options button {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .timer {
+    width: 56px;
+    height: 56px;
+    font-size: 1.2rem;
+  }
+
+  .final-score {
+    font-size: 2rem;
+  }
+
+  .score-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .history-list {
+    max-height: 300px;
+    padding-right: 0.5rem;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .history-item span {
+    align-self: flex-end;
+  }
 }
